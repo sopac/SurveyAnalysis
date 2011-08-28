@@ -1,13 +1,13 @@
-//Current Process Ð sharing of information between members of staff. Please rate how important the following media are to you for communicating and sharing information on a regular basis.
-//jquarks4s_answers_policies.csv
+//Please rate how familiar you are with SPC's policies on the following:
+
 int count = 0
 
 Map<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>() // q, <not_good, poor, fair, good, excellent>
 
-new File("/Users//SPC/Downloads/_survey/jquarks4s_answers(3).csv").eachLine { line ->
+new File("/Users//SPC/Downloads/_survey/jquarks4s_answers_policies.csv").eachLine { line ->
 	String[] arr =  line.split(";")
 	if (count != 0){
-		for (int i = 12; i <= 170; i = i + 8){
+		for (int i = 12; i <= 75; i = i + 8){
 			String q = arr[i].replaceAll("\"", "").trim()
 			String ans = arr[i - 3].replaceAll("\"", "").trim()
 
